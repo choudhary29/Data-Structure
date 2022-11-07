@@ -51,6 +51,17 @@ Stacktop(int x){
 int main(){
     int x;
     Initialize();
+    int x;
+    while(x!=0){
+        int r=x%2;
+        push(r);
+        x=x/2;
+      }
+      while(!Isempty())
+      {
+        int a=pop(0);
+        cout<<a;
+      }
     
     return 0;
 }

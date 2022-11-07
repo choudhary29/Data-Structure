@@ -2,7 +2,15 @@
 #include<stack>
 using namespace std;
     prcd(char a,char b){
-    if(a=='^'||a=='/'||a=='%'){
+        if(a=='('||b=='('){
+            return false;
+        }
+        else{
+            if(b==')'){
+                return true;
+            }
+            else{
+                if(a=='^'||a=='/'||a=='%'){
          if(b=='^'){
             return false;
          }
@@ -18,11 +26,14 @@ using namespace std;
                 return false;
             }
          }
+            }
+        }
+    
     }
     
     
     int main(){
-        cout<<prcd('+','-');
+        cout<<prcd('+',')');
         return 0;
     }
    
