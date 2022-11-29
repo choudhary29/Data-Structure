@@ -72,7 +72,7 @@ int main(){
     insend(&start,50);
     traverse(start);
     p=start;
-    for(int i=1;i<4;i++){
+    for(int i=1;i<2;i++){
     p=p->next;
     }
     insaft(&p,40);
