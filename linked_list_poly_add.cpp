@@ -1,37 +1,37 @@
 #include "ll_poly.h"
-struct node *polyaddll(struct node **poly1, struct node **poly2){
-    struct node *poly3, *p, *q;
-    p=*poly1;
-    q=*poly2;
-    poly3= NULL;
-    while(p!=NULL && q!=NULL){
-        if(p->exp==q->exp){
-            insend(&poly3,p->coff+q->coff,p->exp);
-            p=p->next;
-            q=q->next;
-        }
-        else{
-            if(p->exp>q->exp){
-                insend(&poly3,p->coff,p->exp);
-                p=p->next;
-            }
-            else{
-                insend(&poly3,q->coff,q->exp);
-                q=q->next;
-            }
-        }
+// struct node *polyaddll(struct node **poly1, struct node **poly2){
+//     struct node *poly3, *p, *q;
+//     p=*poly1;
+//     q=*poly2;
+//     poly3= NULL;
+//     while(p!=NULL && q!=NULL){
+//         if(p->exp==q->exp){
+//             insend(&poly3,p->coff+q->coff,p->exp);
+//             p=p->next;
+//             q=q->next;
+//         }
+//         else{
+//             if(p->exp>q->exp){
+//                 insend(&poly3,p->coff,p->exp);
+//                 p=p->next;
+//             }
+//             else{
+//                 insend(&poly3,q->coff,q->exp);
+//                 q=q->next;
+//             }
+//         }
        
-    }
-    while(p!=NULL){
-        insend(&poly3, p->coff, p->exp);
-        p=p->next;
-    }
-    while(q!=NULL){
-        insend(&poly3, q->coff, q->exp);
-        q=q->next;
-    }
-    return poly3;
-}
+//     }
+//     while(p!=NULL){
+//         insend(&poly3, p->coff, p->exp);
+//         p=p->next;
+//     }
+//     while(q!=NULL){
+//         insend(&poly3, q->coff, q->exp);
+//         q=q->next;
+//     }
+//     return poly3;
+// }
 
 int main(){
     struct node *poly1=NULL ;

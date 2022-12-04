@@ -2,8 +2,19 @@
 void ordins(struct node**start, int key){
     struct node *p;
     struct node *q=NULL;
-    
+    q=NULL;
     p=*start;
+    while(p!=NULL && key>=p->info){
+        q=p;
+        p=p->next;
+    }
+    if(q!=NULL){
+        insaft(&q,q->info,key);
+    }
+    else{
+        insbeg(start,key);
+    }
+
    
 }
 int main(){
@@ -24,7 +35,7 @@ int main(){
     // traverse(&start2);
     cout<<endl;
     cout<<"ordered linked list is:  ";
-    ordins(&start1,4);
+    ordins(&start1,3);
     traverse(&start1);
     return 0;
 }

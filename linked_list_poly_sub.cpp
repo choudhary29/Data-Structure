@@ -1,14 +1,14 @@
 #include "ll_poly.h"
-struct node *polysubll(struct node **poly1,struct node **poly2){
-struct node *q=*poly2;
-while(q!=NULL){
-    q->coff=-1*(q->coff);
-    q=q->next;
-}
-struct node *poly3=polyaddll(poly1,poly2);
-return poly3;
+// struct node *polysubll(struct node **poly1,struct node **poly2){
+// struct node *q=*poly2;
+// while(q!=NULL){
+//     q->coff=-1*(q->coff);
+//     q=q->next;
+// }
+// struct node *poly3=polyaddll(poly1,poly2);
+// return poly3;
     
-}
+// }
 int main(){
     struct node *poly1=NULL ;
     struct node *poly2=NULL ;

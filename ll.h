@@ -113,3 +113,19 @@ void insend(struct node **start,int x){
     temp->next=p;
     }
 }
+void ordins(struct node**start, int key){
+    struct node *p;
+    struct node *q=NULL;
+    q=NULL;
+    p=*start;
+    while(p!=NULL && key>=p->info){
+        q=p;
+        p=p->next;
+    }
+    if(q!=NULL){
+        insaft(&q,q->info,key);
+    }
+    else{
+        insbeg(start,key);
+    }
+}

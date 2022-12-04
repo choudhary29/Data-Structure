@@ -148,3 +148,42 @@ struct node *polyaddll(struct node **poly1, struct node **poly2){
     }
     return poly3;
 }
+
+struct node *polysubll(struct node **poly1,struct node **poly2){
+struct node *q=*poly2;
+while(q!=NULL){
+    q->coff=-1*(q->coff);
+    q=q->next;
+}
+struct node *poly3=polyaddll(poly1,poly2);
+return poly3;
+    
+}
+
+
+void ordins(struct node**start, int c,int e){
+    struct node *p;
+    struct node *q=NULL;
+    q=NULL;
+    p=*start;       
+    while(p!=NULL && c>=(p->coff)){
+        q=p;
+        p=p->next;
+    }
+    if(q!=NULL){
+        insaft(&q,q->next->coff,e);
+    }
+    else{
+        insbeg(start,c,e);
+    }
+}
+int delaft(struct node **p,int c,int e){
+    int x;
+    struct node *q, *r;
+    q=(*p)->next;
+    r=q->next;
+    (*p)->next=r;
+    free(q);
+    return x;
+
+}

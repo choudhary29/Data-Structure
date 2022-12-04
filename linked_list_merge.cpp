@@ -15,7 +15,7 @@ struct node *mergell(struct node **start1, struct node **start2, struct node **s
         }
     }
     while(p!=NULL){
-        insend(start3,p->info);
+        insend(start3,p->info)
         p=p->next;
     }
     while(q!=NULL){
