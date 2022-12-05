@@ -23,7 +23,7 @@ int delbeg(struct node **start){
     free(p);
     return x;
 }
-int del(struct node **start,int a){
+int delaft(struct node **start,int a){
     struct node *p=*start;
     struct node *temp;
     if(p==NULL){
